@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(0, 0, 0);
+    /* margin: auto; */
+}
+.msj{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+}
+.tam{
+    height:70px;
+    width:80px;
+}
+.barratop{
+    color: white;
+    padding: 10px;
+    background-color: rgb(141, 53, 53);
+}
+.logotexto{
+    text-decoration: none !important;
+    color: white !important;
+}
+.logotexto:a:hover{
+    color: white;
+}
+.tamop{
+    margin-right: 100px !important;
+    height: 150px;
+    width: 200px;
+}
+.selecciones{
+    font-size:24px;
+    text-decoration: none;
+    text-align: center !important; 
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    color: red;
+}
+.fomulario_seleccion{
+    margin: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
+    background-color:red;
+    color: white;
+}
+.colorformu{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.colorfoter{
+    background-color: rgb(141, 53, 53);
+    color: rgb(255, 255, 255);
+}
+.tabla{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0);
+    border-radius: 1px;
+    padding: 100px !important;
+    margin: 5px;
+}
+.containerformulario{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.container_despachante{
+    border: 10px;
+    color: rgb(0, 0, 0);
+}
+.texto_sucursal{
+    font-size: 24px;
+    color: rgb(255, 255, 255) !important;
+}
+.imgrepa{
+    height: 150px;
+    width: 190px;
+}

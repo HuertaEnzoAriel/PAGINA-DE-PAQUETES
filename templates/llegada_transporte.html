@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+  <div>
+    <div class="colorformu m-3 p-3 rounded">
+      <h3>{{msjerror}}</h3>
+      <h1 style="color: black;">Registrar Transporte</h1><br>
+      <form action="{{ request.path }}" method="POST" class="">           
+          <div class="col-md-4 ">
+              <h3>Paquetes sin entregar</h3>
+              <hr>
+              <table class="tabla">
+                <thead class="tabla">
+              <tr>
+                <td><b>Numero Transporte</b></td>
+                <td>| <b>Fecha y Hora</b> </td>   
+                <td><b>Agregar</b></td>
+                </tr>
+                </thead>
+                {% for data in llegadatransporte %}
+                <tbody class="tabla">
+                <tr>
+                    <td> {{data.numerotransporte}}  </td>
+                    <td> | {{data.fechahorasalida}} </td>
+                    <!-- <td><a style="text-decoration: none;" href="/actualizardato/{{data.id}}" type="button">Agregar al Transporte</a></td> -->
+                    <td style="text-align: center;"><input type="checkbox" name="llegada[]" value="{{data.id}}" />
+                    </td>
+                </tr>
+                </tbody>
+                {% endfor%}
+                </table>
+            </label>
+            <hr>
+          </div>
+          <div class="col-6">
+            <br>
+            <button type="submit" class="btn btn-danger">Registrar Llegada</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</body>
+{%endblock%}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+    <h1>{{numero}}</h1>
+<div class="demo_conteiner">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-6 col-12 mx-auto">
+         <div class="p-5 m-3 rounded shadow-lg" style="background-color: #ff0000;">
+           <h3 class="mb-2 text-center pt-2" style="color: #ffffff;">Bienvenido a la sucursal <b>{{sucursal.numero}}</b></h3></BR>
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href = "{{ url_for('agregar_paquete') }}">Registrar Paquete</a>
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href = "{{ url_for('salida_transporte') }}">Salida de Transporte</a>
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href = "{{ url_for('llegada_transporte') }}">Llegada de Transporte</a>
+           <br>
+           <hr style="background-color: rgb(0, 0, 0); color: rgb(99, 23, 23);">
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href="{{ url_for('despachante') }}">Volver</a>
+
+         </div>        
+       </div>
+     </div>
+   </div>
+ </div> 
+</body>
+{% endblock %}
+
+</html>

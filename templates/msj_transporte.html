@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+    <div class="msj">
+        <br>
+        <h3>{{msjexito}}</h3>
+        <br>
+        <a style="color: white;" class="text-decoration-none" href="{{ url_for('index') }}"><button type="button" class="btn btn-danger">Volver</button></a>
+        
+    </div>
+</body>
+{% endblock %}

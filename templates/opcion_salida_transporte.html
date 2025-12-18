@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+    <div>
+      <div class="colorformu m-3 p-3 rounded">
+        <h3 style="color: red;">{{msjerror}}</h3>
+        <h1 style="color: black;">Registrar Transporte</h1><br>
+        <form action="{{ request.path }}" method="POST" class="">           
+            <div class="col-md-4 ">
+                <h3>Paquetes sin entregar</h3>
+                <hr>
+                <table class="tabla">
+                    <thead class="tabla">
+                  <tr>
+                    <td>Numero Envio </td>
+                    <td>| Direccion Destinatario </td>   
+                    </tr>
+                    </thead>
+                    {% for data in paquetesnoentregado %}
+                    <tbody class="tabla">
+                    <tr>
+                        <td> {{data.numeroenvio}}  </td>
+                        <td> | {{data.dirdestinatario}} </td>
+                        <!-- <td><a style="text-decoration: none;" href="/actualizardato/{{data.id}}" type="button">Agregar al Transporte</a></td> -->
+                        <td><input type="checkbox" name="paquetes[]" value="{{data.id}}" />
+                        </td>
+                    </tr>
+                    </tbody>
+                    {% endfor%}
+                    </table>
+              </label>
+              <hr>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Sucursal a Entregar</label><br>
+              <select name="sucursales" id="sucursales">
+                <option value="0">Selecciona</option>
+                  {% for sucursal in listasucursales %}
+                  <option value="{{ sucursal.id }}">
+                      <!-- {{sucursal.numero, sucursal.provincia, sucursal.localidad}} -->
+                       {{sucursal}}
+                  </option>
+                  {%endfor%}
+              </select>
+            </div>
+            <div class="col-6">
+              <br>
+              <button type="submit" class="btn btn-danger">Registrar Transporte</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+</body>
+{%endblock%}

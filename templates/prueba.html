@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+  {%for arr in paquetes%}
+<h1>{{arr}}</h1>
+{%endfor%}
+</body>
+{% endblock %}

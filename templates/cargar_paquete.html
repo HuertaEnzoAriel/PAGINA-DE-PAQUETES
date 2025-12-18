@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+    <div class="demo_conteiner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12 mx-auto">
+
+            <div class="p-5 m-3 rounded shadow-lg" style="background-color: #ff0000;">
+              <p class="text-center lead" style="color: #ffffff;">{{msj}}</p>
+              <h3 class="mb-2 text-center pt-2" style="color: #ffffff;">Carga de paquetes</h3>
+              <p class="text-center lead" style="color: #ffffff;">Ingresa Nuevo Paquete</p>
+              <form action="{{ request.path }}" method="POST">
+                <label class="font-500" style="color: #ffffff;">Destino</label>
+                <input name="destino" class="form-control form-control-lg mb-3" type="text" placeholder="ej: San Juan, Rawson">
+                <label class="font-500" style="color: #ffffff;">Destinatario</label>
+                <input name="destinatario" class="form-control form-control-lg mb-3" type="text" placeholder="Juan Perez">
+                <label class="font-500" style="color: #ffffff;">Peso</label>
+                <input name="peso" class="form-control form-control-lg mb-3" type="text" placeholder="Ingrese peso total en kilos">
+                <input id="userId" name="userId" type="hidden" value="{{idsucu.id}}"> 
+                <div class="col-12 mx-auto d-grid">
+                  <button type="submit" id="paquete_nuevo" class="btn btn-danger">Registrar Paquete</button>             
+                </div>
+                
+              </form>
+              <div class="text-center pt-4">
+                <p class="m-0 font-weight-bold" style="color: white;">¡No olvides colocar bien los datos!</p>
+              </div>          
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+{% endblock %}

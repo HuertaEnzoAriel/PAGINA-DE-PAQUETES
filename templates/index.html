@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}LogiPack{% endblock title %}
+{% block content %}
+<body>
+<div class="demo_conteiner">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-6 col-12 mx-auto">
+         <div class="p-5 m-3 rounded shadow-lg" style="background-color: #ff0000;">
+           <h3 class="mb-2 text-center pt-2" style="color: #ffffff;">ELIGE OPERADOR</h3></BR>
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href = "">REPARTIDOR</a>
+           <hr style="background-color: rgb(0, 0, 0); color: rgb(99, 23, 23);">
+           <a class="form-control form-control-m mb-3 text-center text-decoration-none" href="{{ url_for('despachante') }}">DESPACHANTE</a>
+         </div>        
+       </div>
+     </div>
+   </div>
+ </div> 
+</body>
+{% endblock %}
+
+</html>
